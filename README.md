@@ -1,2 +1,2 @@
-# This is a header
+# SAP Fiori Element - Demo Project
 This is a description 3
