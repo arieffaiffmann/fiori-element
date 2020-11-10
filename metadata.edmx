@@ -46,7 +46,7 @@
                 <Property Name="OrderId" Type="Edm.Int32" Nullable="false" />
                 <Property Name = "ProductId" Type="Edm.Int32" />
                 <Property Name = "CustomerName" Type="Edm.String" MaxLength = "40" />
-                <Property Name = "OrderDate" Type="Edm.DateTime" />
+                <Property Name = "OrderDate" Type="Edm.DateTime" /> 
                 <Property Name = "ShippedDate" Type="Edm.DateTime" />
                 <Property Name = "ShipVia" Type="Edm.String" MaxLength="15" />
             </EntityType>
