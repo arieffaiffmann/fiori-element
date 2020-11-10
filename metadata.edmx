@@ -10,9 +10,9 @@
 
             <EntityType Name="Supplier">
                 <Key>
-                    <PropertyRef Name="Id"/>
+                    <PropertyRef Name="SupplierId"/>
                 </Key>
-                <Property Name="Id" Type="Edm.Int32" />
+                <Property Name="SupplierId" Type="Edm.Int32" Nullable="false" />
                 <Property Name="Name" Type="Edm.String" MaxLength="40" />
                 <Property Name="Category" Type="Edm.String" MaxLength="20" />
                 <Property Name="Address" Type="Edm.String" MaxLength="50" />
