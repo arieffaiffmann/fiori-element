@@ -14,7 +14,8 @@
             <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
         </edmx:Reference>
 
-        <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml">
+        <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml"
+            xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">>
             <edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1" />
         </edmx:Reference>
 
@@ -107,26 +108,26 @@
                     <Collection>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Name"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                            <!-- <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> -->
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Category"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                            <!-- <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> -->
                         </Record>
 
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Country"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                            <!-- <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> -->
                         </Record>
 
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="City"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                            <!-- <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> -->
                         </Record>
 
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Phone"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                            <!-- <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/> -->
                         </Record>
                     </Collection>
                 </Annotation>
