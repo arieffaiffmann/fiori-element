@@ -107,33 +107,37 @@
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Name"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                            <PropertyValue Property="Label" String="Company"/>
+                            <!-- <PropertyValue Property="Label" String="Company"/> -->
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Category"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                            <PropertyValue Property="Label" String="Category"/>
+                            <!-- <PropertyValue Property="Label" String="Category"/> -->
                         </Record>
 
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Country"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                            <PropertyValue Property="Label" String="Country"/>
+                            <!-- <PropertyValue Property="Label" String="Country"/> -->
                         </Record>
 
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="City"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                            <PropertyValue Property="Label" String="City"/>
+                            <!-- <PropertyValue Property="Label" String="City"/> -->
                         </Record>
 
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Phone"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                            <PropertyValue Property="Label" String="Phone"/>
+                            <!-- <PropertyValue Property="Label" String="Phone"/> -->
                         </Record>
                     </Collection>
                 </Annotation>
+            </Annotations>
+
+            <Annotations Target="SalesModel.Supplier/Name" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <Annotation Term="Common.Label" String="Company" />
             </Annotations>
 
             <Annotations Target="SalesModel.SalesEntities/Suppliers" xmlns="http://docs.oasis-open.org/odata/ns/edm" >
