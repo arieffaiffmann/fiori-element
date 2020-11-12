@@ -1,24 +1,24 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Wed Nov 11 2020 14:20:01 GMT+0800 (Malaysia Time)|
+|**Generation Date and Time**<br>Thu Nov 12 2020 13:49:53 GMT+0800 (Malaysia Time)|
 |**App Generator Version**<br>1.0.21|
 |**Generation Platform**<br>Visual Studio Code|
 |**Template Used**<br>List Report Object Page V2|
-|**Service Type**<br>OData Url|
-|**Service URL**<br>https://sapes5.sapdevcenter.com/sap/opu/odata/sap/SEPMRA_PROD_MAN/|
-|**Main Entity**<br>SEPMRA_C_PD_Product|
+|**Service Type**<br>File|
+|**Metadata File**<br>metadata.edmx|
+|**Main Entity**<br>Suppliers|
 |**Navigation Entity**<br>None|
-|**Module Name**<br>myfioriapp|
-|**Application Title**<br>Manage Products|
+|**Module Name**<br>myfioriappproject|
+|**Application Title**<br>Manage Suppliers|
 |**Namespace**<br>com.rizing|
 |**UI5 Theme**<br>sap_fiori_3|
 |**UI5 Version**<br>Latest |
 |**Enable Telemetry**<br>True |
 
-## myfioriapp
+## myfioriappproject
 
-Fiori elements application for managing Products
+Fiori elements application for managing Suppliers
 
 ### Starting the generated app
 
