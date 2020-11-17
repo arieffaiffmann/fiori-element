@@ -36,7 +36,7 @@
                 <Property Name="Country" Type="Edm.String" MaxLength="15"/>
                 <Property Name="Phone" Type="Edm.String" MaxLength="24"/>
                 <Property Name="Website" Type="Edm.String" MaxLength="Max"/>
-                <NavigationProperty Name="ToProducts" Relationship="SalesModel.FK_Supplier_Product" FromRole="Supplier" ToRole="Product"/>
+                <Property Name="CountryID" Type="Edm.String" MaxLength="5"/>                
             </EntityType>
             <EntityType Name="Product">
                 <Key>
