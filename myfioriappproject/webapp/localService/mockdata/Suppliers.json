@@ -42,7 +42,7 @@
     "Fax": null,
     "Website":"https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwijla2qrfzsAhW8H7cAHeYIAo8QPAgI",
     "CountryId": "USA",
-    "LogoPath": "/images/logo/logo2.png",
+    "LogoPath": "/images/logo/logo2.jpg",
     "Products": {
         "__deferred": {
             "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/Suppliers(2)/Products"
@@ -117,7 +117,7 @@
     "Fax": null,
     "Website":"https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwijla2qrfzsAhW8H7cAHeYIAo8QPAgI",
     "CountryId": "SPN",
-    "LogoPath": "/images/logo/logo5.png",
+    "LogoPath": "/images/logo/logo5.jpg",
     "Products": {
         "__deferred": {
             "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/Suppliers(5)/Products"
