@@ -36,7 +36,8 @@
                 <Property Name="Country" Type="Edm.String" MaxLength="15"/>
                 <Property Name="Phone" Type="Edm.String" MaxLength="24"/>
                 <Property Name="Website" Type="Edm.String" MaxLength="Max"/>
-                <Property Name="CountryID" Type="Edm.String" MaxLength="5"/>                
+                <Property Name="CountryId" Type="Edm.String" MaxLength="5"/>
+                <NavigationProperty Name="ToProducts" Relationship="SalesModel.FK_Supplier_Product" FromRole="Supplier" ToRole="Product"/>
             </EntityType>
             <EntityType Name="Product">
                 <Key>
@@ -64,6 +65,9 @@
                 <Property Name="ShipVia" Type="Edm.String" MaxLength="15"/>
             </EntityType>
             <EntityType Name="VH_Country">
+                <Key>
+                    <PropertyRef Name="Code" />
+                </Key>
                 <Property Name="Code" Type="Edm.String" MaxLength="5"/>
                 <Property Name="Text" Type="Edm.String" MaxLength="20"/>
             </EntityType>
@@ -136,6 +140,12 @@
                         </Record>
                     </Collection>
                 </Annotation>
+
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>CountryId</PropertyPath>
+                    </Collection>
+                </Annotation>
             </Annotations>
 
             <Annotations Target="SalesModel.Supplier/Name"
@@ -168,6 +178,31 @@
                         <PropertyValue Property="Updatable" Bool="false"/>
                     </Record>
                 </Annotation>
+            </Annotations>
+
+            <Annotations Target="SalesModel.Supplier/CountryId"
+                xmlns = "http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="VH_Countries"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="CountryId"/>
+                                    <PropertyValue Property="ValueListProperty" String="Code" />
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation >
+                <Annotation Term ="Common.ValueListWithFixedValues" Bool="true"></Annotation>
+            </Annotations>
+            <Annotations Target ="SalesModel.VH_Country/Code"
+                xmlns = "http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term = "Common.Text" Path="Text"></Annotation>
             </Annotations>
 
         </Schema>
