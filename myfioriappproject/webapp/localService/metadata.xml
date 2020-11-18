@@ -246,6 +246,8 @@
                 </Annotation >
             </Annotations>
 
+            <!-- Supplier Common Label -->
+
             <Annotations Target="SalesModel.Supplier/LogoPath"
                 xmlns="http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term="Common.Label" String="Logo" />
@@ -256,6 +258,8 @@
                 xmlns="http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term="Common.Label" String="Company" />
             </Annotations>
+
+            <!-- Product Common Label -->
 
             <Annotations Target="SalesModel.Product/UnitsInStock"
                 xmlns="http://docs.oasis-open.org/odata/ns/edm">
@@ -276,6 +280,8 @@
                 xmlns="http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term="Common.Label" String="Quantity Per Unit" />
             </Annotations>
+
+            <!-- Suppliers CRUD settings -->
 
             <Annotations Target="SalesModel.SalesEntities/Suppliers"
                 xmlns="http://docs.oasis-open.org/odata/ns/edm">
@@ -303,6 +309,12 @@
                     </Record>
                 </Annotation>
             </Annotations>
+
+            <!-- Products CRUD settings -->
+
+
+
+            <!-- Enabling filters for Country ID in Supplier -->
 
             <Annotations Target="SalesModel.Supplier/CountryId"
                 xmlns = "http://docs.oasis-open.org/odata/ns/edm">
