@@ -193,7 +193,7 @@
                     </Collection>
                 </Annotation>
 
-                <Annotation Term="UI.Facets" >
+                <Annotation Term="UI.Facets">
                     <Collection>
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="ToProducts/@UI.LineItem"/>
@@ -226,23 +226,23 @@
             <Annotations Target="SalesModel.Product"
                 xmlns="http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term = "UI.LineItem">
-                <Collection>
-                    <Record Type="UI.DataField">
-                        <PropertyValue Property="Value" Path="Name"/>
-                    </Record>
-                    <Record Type="UI.DataField">
-                        <PropertyValue Property="Value" Path="QuantityPerUnit" />
-                    </Record>
-                    <Record Type="UI.DataField">
-                        <PropertyValue Property="Value" Path="Discontinued" />
-                    </Record>
-                    <Record Type="UI.DataField">
-                        <PropertyValue Property="Value" Path="UnitPrice" />
-                    </Record>
-                    <Record Type="UI.DataField">
-                        <PropertyValue Property="Value" Path="UnitsInStock"/>
-                    </Record>
-                </Collection>
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Name"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="QuantityPerUnit" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Discontinued" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="UnitPrice" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="UnitsInStock"/>
+                        </Record>
+                    </Collection>
                 </Annotation >
             </Annotations>
 
@@ -255,6 +255,26 @@
             <Annotations Target="SalesModel.Supplier/Name"
                 xmlns="http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term="Common.Label" String="Company" />
+            </Annotations>
+
+            <Annotations Target="SalesModel.Product/UnitsInStock"
+                xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Units In Stock" />
+            </Annotations>
+
+            <Annotations Target="SalesModel.Product/UnitPrice"
+                xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Unit Price" />
+            </Annotations>
+
+            <Annotations Target="SalesModel.Product/Discontinued"
+                xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Discontinued" />
+            </Annotations>
+
+            <Annotations Target="SalesModel.Product/QuantityPerUnit"
+                xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Quantity Per Unit" />
             </Annotations>
 
             <Annotations Target="SalesModel.SalesEntities/Suppliers"
