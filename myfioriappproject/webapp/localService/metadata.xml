@@ -247,7 +247,6 @@
             </Annotations>
 
             <!-- Supplier Common Label -->
-
             <Annotations Target="SalesModel.Supplier/LogoPath"
                 xmlns="http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term="Common.Label" String="Logo" />
@@ -260,7 +259,6 @@
             </Annotations>
 
             <!-- Product Common Label -->
-
             <Annotations Target="SalesModel.Product/UnitsInStock"
                 xmlns="http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term="Common.Label" String="Units In Stock" />
@@ -282,7 +280,6 @@
             </Annotations>
 
             <!-- Suppliers CRUD settings -->
-
             <Annotations Target="SalesModel.SalesEntities/Suppliers"
                 xmlns="http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term="Capabilities.InsertRestrictions">
@@ -311,11 +308,31 @@
             </Annotations>
 
             <!-- Products CRUD settings -->
+            <Annotations Target="SalesModel.SalesEntities/Products" xmlns = "http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.InsertRestrictions" >
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>                
+            </Annotations>
 
+            <Annotations Target="SalesModel.SalesEntities/Products" xmlns = "http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.UpdateRestrictions" >
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
 
+            <Annotations Target="SalesModel.SalesEntities/Products" xmlns = "http://docs.oasis-open.org/odata/ns/edm">
+            <Annotation Term="Capabilities.DeleteRestrictions" >
+                <Record Type="Capabilities.DeleteRestrictionsType">
+                    <PropertyValue Property="Deletable" Bool="false"/>
+                </Record>
+            </Annotation>                
+            </Annotations>
 
             <!-- Enabling filters for Country ID in Supplier -->
-
             <Annotations Target="SalesModel.Supplier/CountryId"
                 xmlns = "http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term="Common.ValueList">
