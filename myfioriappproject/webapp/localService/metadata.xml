@@ -117,9 +117,9 @@
                 <Annotation Term="UI.LineItem">
                     <Collection>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="LogoPath" />/>
+                            <PropertyValue Property="Value" Path="LogoPath" />
                             <!-- <PropertyValue Property="IconUrl" Path="LogoPath"/> -->
-                        </Record>                        
+                        </Record>
 
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Name"/>
@@ -152,7 +152,7 @@
                         <PropertyPath>CountryId</PropertyPath>
                     </Collection>
                 </Annotation>
-                
+
                 <Annotation Term ="UI.HeaderInfo">
                     <Record Type="UI.HeaderInfoType">
                         <PropertyValue Property="TypeName" String="Supplier"/>
@@ -168,8 +168,43 @@
                             </Record>
                         </PropertyValue>
                         <PropertyValue Property="ImageUrl" Path="LogoPath"/>
+
+                        <!-- <Annotation Term="Common.ValueListRelevantQualifiers">
+                            <Collection>
+                                <String> Category </String>
+                                <String> Website </String>
+                            </Collection>
+                        </Annotation> -->
                     </Record>
                 </Annotation >
+
+                <Annotation Term="UI.HeaderFacets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="General Information"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#GenInfo"/>
+                            <PropertyValue Property="ID"  String="GenInfo"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+
+                <Annotation Term="UI.FieldGroup" Qualifier="GenInfo">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Category"/>
+                                    <PropertyValue Property="Value" Path="Category"/>
+                                </Record>
+                                <Record Type="UI.DataFieldWithUrl">
+                                    <PropertyValue Property="Url" Path="Website"/>
+                                    <PropertyValue Property="Value" Path="Website"/>
+                                    <PropertyValue Property="Label" String="Website"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
 
             </Annotations>
 
