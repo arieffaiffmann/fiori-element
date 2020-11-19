@@ -4,7 +4,7 @@
     "Title": "Purchasing Manager",
     "Email": "charlotte@gmail.com",
     "Phone": "0171234567",
-    "ImagePath": "/images/contactPerson/person101.jpg",
+    "ImagePath": "/images/contactPerson/person102.jpg",
     "__metadata": {
       "uri": "ContactPersons(101)",
       "type": "SalesModel.ContactPersons"
@@ -16,7 +16,7 @@
     "Title": "Order Administrator",
     "Email": "shelley@gmail.com",
     "Phone": "0171234567",
-    "ImagePath": "/images/contactPerson/person102.jpg",
+    "ImagePath": "/images/contactPerson/person101.jpg",
     "__metadata": {
       "uri": "ContactPersons(102)",
       "type": "SalesModel.ContactPersons"
