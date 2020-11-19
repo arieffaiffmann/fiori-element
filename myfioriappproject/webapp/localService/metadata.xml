@@ -153,6 +153,9 @@
                     <End EntitySet="ContactPersons" Role="ContactPerson"/>
                 </AssociationSet>
             </EntityContainer>
+
+            <!-- SUPPLIER ANNOTATIONS -->
+
             <Annotations Target="SalesModel.Supplier"
                 xmlns="http://docs.oasis-open.org/odata/ns/edm">
 
@@ -271,6 +274,8 @@
                 </Annotation>
             </Annotations>
 
+            <!-- PRODUCT ANNOTATIONS -->
+
             <Annotations Target="SalesModel.Product"
                 xmlns="http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term = "UI.LineItem">
@@ -310,7 +315,48 @@
                     </Record>
                 </Annotation>
 
+                <!-- <Annotation Term="UI.HeaderFacets">
+                <Collection>
+                    <Record Type="UI.ReferenceFacet">
+                        <PropertyValue Property="Target" AnnotationPath=""/>
+                    </Record>
+                </Collection>
+                </Annotation > -->
 
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="ToOrders/@UI.LineItem"/>
+                            <PropertyValue Property="ID" String="OrderList"/>
+                            <PropertyValue Property="Label" String="Order List"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+
+            <!-- ORDERS ANNOTATIONS -->
+
+            <Annotations Target="SalesModel.Order"
+                xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Id"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path = "CustomerName"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="OrderDate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ShippedDate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ShipVia"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
             </Annotations>
 
             <!-- Supplier Common Label -->
@@ -352,6 +398,32 @@
                 <Annotation Term="Common.Label" String="Quantity Per Unit" />
             </Annotations>
 
+            <!-- Order Common Label -->
+            <Annotations Target="SalesModel.Order/Id"
+                xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Order ID" />
+            </Annotations>
+
+            <Annotations Target="SalesModel.Order/CustomerName"
+                xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Customer" />
+            </Annotations>
+
+            <Annotations Target="SalesModel.Order/OrderDate"
+                xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Order Date" />
+            </Annotations>
+
+            <Annotations Target="SalesModel.Order/ShippedDate"
+                xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Shipped Date" />
+            </Annotations>
+
+            <Annotations Target="SalesModel.Order/ShipVia"
+                xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.Label" String="Ship Via" />
+            </Annotations>
+
             <!-- Suppliers CRUD settings -->
             <Annotations Target="SalesModel.SalesEntities/Suppliers"
                 xmlns="http://docs.oasis-open.org/odata/ns/edm">
@@ -380,7 +452,7 @@
                 </Annotation>
             </Annotations>
 
-            <!-- Products CRUD settings --> 
+            <!-- Products CRUD settings -->
             <Annotations Target="SalesModel.SalesEntities/Products"
                 xmlns = "http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term="Capabilities.InsertRestrictions">
@@ -400,6 +472,34 @@
             </Annotations>
 
             <Annotations Target="SalesModel.SalesEntities/Products"
+                xmlns = "http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.DeleteRestrictions">
+                    <Record Type="Capabilities.DeleteRestrictionsType">
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+            <!-- Order CRUD settings -->
+            <Annotations Target="SalesModel.SalesEntities/Orders"
+                xmlns = "http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.InsertRestrictions">
+                    <Record Type="Capabilities.InsertRestrictionsType">
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+            <Annotations Target="SalesModel.SalesEntities/Orders"
+                xmlns = "http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.UpdateRestrictions">
+                    <Record Type="Capabilities.UpdateRestrictionsType">
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+            <Annotations Target="SalesModel.SalesEntities/Orders"
                 xmlns = "http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term="Capabilities.DeleteRestrictions">
                     <Record Type="Capabilities.DeleteRestrictionsType">
@@ -455,7 +555,7 @@
                                     <PropertyValue Property="uri" Path="Phone"/>
                                 </Record>
                             </Collection>
-                        </PropertyValue>                        
+                        </PropertyValue>
                         <PropertyValue Property="email">
                             <Collection>
                                 <Record Type="Communication.EmailAddressType">
