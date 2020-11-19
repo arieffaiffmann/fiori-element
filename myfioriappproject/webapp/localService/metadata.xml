@@ -264,8 +264,8 @@
                                     <PropertyValue Property="Value" Path="Category"/>
                                 </Record>
                                 <Record Type="UI.DataFieldWithUrl">
-                                    <PropertyValue Property="Url" Path="Website"/>
                                     <PropertyValue Property="Value" Path="Website"/>
+                                    <PropertyValue Property="Url" Path="Website"/>
                                     <PropertyValue Property="Label" String="Website"/>
                                 </Record>
                             </Collection>
