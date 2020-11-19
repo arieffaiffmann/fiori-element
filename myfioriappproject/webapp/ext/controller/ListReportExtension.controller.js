@@ -7,7 +7,8 @@ sap.ui.define([
     "sap/m/Text",
     "sap/m/Button",
     "sap/m/ButtonType",
-    "sap/m/DialogType"
+    "sap/m/DialogType",
+    "sap/m/MessageBox"
 ], function (SmartFilterBar, ComboBox, Filter) {
     "use strict";
 
@@ -108,6 +109,13 @@ sap.ui.define([
             oParameterDialog.setModel(oModel);
             oParameterDialog.setBindingContext(oContext);
             oParameterDialog.open();
+        },
+        /**
+         * Event handler when user pressed on the Sales Overview icon.
+         * @public
+         */
+        onPressSalesOverview: function () {
+            MessageBox.success(this.getView().getModel("@i18n").getProperty("salesOverviewText"), {});
         }
     });
 });

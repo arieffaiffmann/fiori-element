@@ -100,35 +100,45 @@
         },
         "extends": {
             "extensions": {
-              "sap.ui.viewExtensions": {
-                "sap.suite.ui.generic.template.ListReport.view.ListReport": {
-                  "SmartFilterBarControlConfigurationExtension|Suppliers": {
-                    "className": "sap.ui.core.Fragment",
-                    "fragmentName": "com.rizing.myfioriappproject.ext.fragment.CustomFilterExtension",
-                    "type": "XML"
-                  }
-                }
-              },
-              "sap.ui.controllerExtensions": {
-                "sap.suite.ui.generic.template.ListReport.view.ListReport": {
-                  "controllerName": "com.rizing.myfioriappproject.ext.controller.ListReportExtension",
-                  "sap.ui.generic.app": {
-                    "Suppliers": {
-                    "EntitySet": "Suppliers",
-                    "Actions": {
-                        "ChangePrice": {
-                        "id": "idChangeTotalSales",
-                        "text": "{{changeTotalSalesLabel}}",
-                        "press": "onPressChangeTotalSales",
-                        "requiresSelection": true
+                "sap.ui.viewExtensions": {
+                    "sap.suite.ui.generic.template.ListReport.view.ListReport": {
+                        "SmartFilterBarControlConfigurationExtension|Suppliers": {
+                            "className": "sap.ui.core.Fragment",
+                            "fragmentName": "com.rizing.myfioriappproject.ext.fragment.CustomFilterExtension",
+                            "type": "XML"
+                        },
+                        "ResponsiveTableColumnsExtension|Suppliers": {
+                            "className": "sap.ui.core.Fragment",
+                            "fragmentName": "com.rizing.myfioriappproject.ext.fragment.ListReportResponsiveTableColumns",
+                            "type": "XML"
+                        },
+                        "ResponsiveTableCellsExtension|Suppliers": {
+                            "className": "sap.ui.core.Fragment",
+                            "fragmentName": "com.rizing.myfioriappproject.ext.fragment.ListReportResponsiveTableCells",
+                            "type": "XML"
                         }
                     }
+                },
+                "sap.ui.controllerExtensions": {
+                    "sap.suite.ui.generic.template.ListReport.view.ListReport": {
+                        "controllerName": "com.rizing.myfioriappproject.ext.controller.ListReportExtension",
+                        "sap.ui.generic.app": {
+                            "Suppliers": {
+                                "EntitySet": "Suppliers",
+                                "Actions": {
+                                    "ChangePrice": {
+                                        "id": "idChangeTotalSales",
+                                        "text": "{{changeTotalSalesLabel}}",
+                                        "press": "onPressChangeTotalSales",
+                                        "requiresSelection": true
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
-                }
-              }
             }
-          },
+        },
         "contentDensities": {
             "compact": true,
             "cozy": true
