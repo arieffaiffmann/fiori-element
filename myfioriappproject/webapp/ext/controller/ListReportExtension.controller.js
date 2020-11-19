@@ -9,7 +9,7 @@ sap.ui.define([
     "sap/m/ButtonType",
     "sap/m/DialogType",
     "sap/m/MessageBox"
-], function (SmartFilterBar, ComboBox, Filter) {
+], function (SmartFilterBar, ComboBox, Filter, SmartField, Dialog, Text, Button, ButtonType, DialogType, MessageBox) {
     "use strict";
 
     return sap.ui.controller("com.rizing.myfioriappproject.ext.controller.ListReportExtension", {
