@@ -380,7 +380,7 @@
                 </Annotation>
             </Annotations>
 
-            <!-- Products CRUD settings -->
+            <!-- Products CRUD settings --> 
             <Annotations Target="SalesModel.SalesEntities/Products"
                 xmlns = "http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term="Capabilities.InsertRestrictions">
